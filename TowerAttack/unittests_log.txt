@@ -1,0 +1,777 @@
+Saving Game!
+DEBUG <Game::SaveGame>: Opened binary stream to 'savegame.dat'!
+DEBUG <SerialiseString>: Saving string: 'ab'
+DEBUG <SerialiseString>: Saving... fSize = 2 strData[1] = b
+[a][b]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <SerialiseString>: Saving string: 'cd'
+DEBUG <SerialiseString>: Saving... fSize = 2 strData[1] = d
+[c][d]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <GameObjectManager::SaveGame>: objectId = 3
+DEBUG <GameObjectManager::SaveGame>: amout = 3
+DEBUG <GameObjectManager::SaveGame>: type = Character
+DEBUG <SerialiseString>: Saving string: 'Character'
+DEBUG <SerialiseString>: Saving... fSize = 9 strData[1] = h
+[C][h][a][r][a][c][t][e][r]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Character::serialise>: ***Saving Character!
+DEBUG <GameObject::serialise(is)>: Saving objects id 0
+DEBUG <GameObject::serialise>: Saving sprite position.x: 50.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 350.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_player.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_player.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][p][l][a][y][e][r][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Character::serialise>: Saved rotation: 0.000000
+DEBUG <Character::serialise>: Saved maxVelocity: 2000.000000
+DEBUG <Character::serialise>: Saved velocity.x: 0.000000
+DEBUG <Character::serialise>: Saved velocity.y: 0.000000
+DEBUG <Character::serialise>: Saved targetPosition.x: 1.000000
+DEBUG <Character::serialise>: Saved targetPosition.y: 4.000000
+DEBUG <SerialiseString>: Saving string: ''
+DEBUG <SerialiseString>: Saving... fSize = 0 strData[1] = Ì
+
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Character::serialise>: Saved last direction: 
+DEBUG <Character::serialise>: ***Data saved!
+DEBUG <GameObjectManager::SaveGame>: type = Tower
+DEBUG <SerialiseString>: Saving string: 'Tower'
+DEBUG <SerialiseString>: Saving... fSize = 5 strData[1] = o
+[T][o][w][e][r]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tower::serialise>: ***Saving Tower!
+DEBUG <GameObject::serialise(is)>: Saving objects id 2
+DEBUG <GameObject::serialise>: Saving sprite position.x: 350.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 250.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_tower.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tower.png'
+DEBUG <SerialiseString>: Saving... fSize = 34 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][o][w][e][r][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Tower::serialise>: Saving ammoCount: 0
+DEBUG <Tower::serialise>: Saving rotation: 0.000000
+DEBUG <Tower::serialise(os)>: Saving turretId 1
+DEBUG <Tower::serialise>: ***Data saved!
+DEBUG <GameObjectManager::SaveGame>: type = Turret
+DEBUG <SerialiseString>: Saving string: 'Turret'
+DEBUG <SerialiseString>: Saving... fSize = 6 strData[1] = u
+[T][u][r][r][e][t]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Turret::serialise>: ***Saving Turret!
+DEBUG <GameObject::serialise(is)>: Saving objects id 1
+DEBUG <GameObject::serialise>: Saving sprite position.x: 350.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 250.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][u][r][r][e][t][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Turret::serialise>: Saving rotation: 161.565048
+DEBUG <Turret::serialise>: ***Data saved!
+DEBUG <GameObjectManager::SaveGame>: Saved game objects!
+DEBUG <SerialiseString>: Saving string: 'ef'
+DEBUG <SerialiseString>: Saving... fSize = 2 strData[1] = f
+[e][f]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_begin.png'
+DEBUG <SerialiseString>: Saving... fSize = 44 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][b][e][g][i][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (50, 350)
+DEBUG <TileRoad::serialise>: Data saved (1, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (150, 350)
+DEBUG <TileRoad::serialise>: Data saved (2, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (250, 350)
+DEBUG <TileRoad::serialise>: Data saved (3, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (350, 350)
+DEBUG <TileRoad::serialise>: Data saved (4, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (350, 450)
+DEBUG <TileRoad::serialise>: Data saved (4, 5)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (450, 450)
+DEBUG <TileRoad::serialise>: Data saved (5, 5)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (550, 250)
+DEBUG <TileRoad::serialise>: Data saved (6, 3)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (550, 350)
+DEBUG <TileRoad::serialise>: Data saved (6, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (550, 450)
+DEBUG <TileRoad::serialise>: Data saved (6, 5)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (650, 250)
+DEBUG <TileRoad::serialise>: Data saved (7, 3)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (750, 250)
+DEBUG <TileRoad::serialise>: Data saved (8, 3)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (850, 150)
+DEBUG <TileRoad::serialise>: Data saved (9, 2)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (850, 250)
+DEBUG <TileRoad::serialise>: Data saved (9, 3)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (950, 150)
+DEBUG <TileRoad::serialise>: Data saved (10, 2)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_end.png'
+DEBUG <SerialiseString>: Saving... fSize = 42 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][e][n][d][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (1050, 50)
+DEBUG <TileRoad::serialise>: Data saved (11, 1)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (1050, 150)
+DEBUG <TileRoad::serialise>: Data saved (11, 2)
+DEBUG <SerialiseString>: Saving string: 'gh'
+DEBUG <SerialiseString>: Saving... fSize = 2 strData[1] = h
+[g][h]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Game::SaveGame>: Closed binary stream to 'savegame.dat'!
+DEBUG <Game::SaveGame> Game saved!
+Loading Game!
+DEBUG <GameObjectManager::LoadGame>: Opened binary stream for 'savegame.dat'!
+Exception <LoadGame>: Could not open file! (bad first marker)
+DEBUG <Game::LoadGame> Something went wrong while loading the game!
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <Character::serialise>: ***Saving Character!
+DEBUG <GameObject::serialise(is)>: Saving objects id 3452816845
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_player.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_player.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][p][l][a][y][e][r][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Character::serialise>: Saved rotation: 123.123001
+DEBUG <Character::serialise>: Saved maxVelocity: 2000.000000
+DEBUG <Character::serialise>: Saved velocity.x: 0.000000
+DEBUG <Character::serialise>: Saved velocity.y: 0.000000
+DEBUG <Character::serialise>: Saved targetPosition.x: 0.000000
+DEBUG <Character::serialise>: Saved targetPosition.y: 0.000000
+DEBUG <SerialiseString>: Saving string: ''
+DEBUG <SerialiseString>: Saving... fSize = 0 strData[1] = Ì
+
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Character::serialise>: Saved last direction: 
+DEBUG <Character::serialise>: ***Data saved!
+DEBUG <GameObject(is)>: Reading objects id: 3452816845
+DEBUG <GameObject(is)>: Reading sprite position.x: 0.000000
+DEBUG <GameObject(is)>: Reading sprite position.y: 0.000000
+DEBUG <GameObject(is)>: Reading file name
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 35
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][p][l][a][y][e][r][.][p][n][g]
+DEBUG <ReadString>: String read:
+resources/images/texture_player.png
+
+DEBUG <GameObject(is)>: File name read:
+resources/images/texture_player.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <GameObject(is)>: Data recovered!
+DEBUG <Character::Character(is)>: ***** Loading data! *****
+DEBUG <Character::Character(is)>: Reading rotation: 123.123001
+DEBUG <Character::Character(is)>: Reading maxVelocity: 2000.000000
+DEBUG <Character::Character(is)>: Reading velocity.x: 0.000000
+DEBUG <Character::Character(is)>: Reading velocity.y: 0.000000
+DEBUG <Character::Character(is)>: Reading targetPosition.x: 0.000000
+DEBUG <Character::Character(is)>: Reading targetPosition.y: 0.000000
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 0
+
+DEBUG <ReadString>: String read:
+
+DEBUG <Character::Character(is)>: Read last direction: 
+DEBUG <Character::Character(is)>: ***** Data loaded! *****
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <Character::serialise>: ***Saving Character!
+DEBUG <GameObject::serialise(is)>: Saving objects id 666
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_player.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_player.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][p][l][a][y][e][r][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Character::serialise>: Saved rotation: 0.000000
+DEBUG <Character::serialise>: Saved maxVelocity: 2000.000000
+DEBUG <Character::serialise>: Saved velocity.x: 0.000000
+DEBUG <Character::serialise>: Saved velocity.y: 0.000000
+DEBUG <Character::serialise>: Saved targetPosition.x: 0.000000
+DEBUG <Character::serialise>: Saved targetPosition.y: 0.000000
+DEBUG <SerialiseString>: Saving string: ''
+DEBUG <SerialiseString>: Saving... fSize = 0 strData[1] = Ì
+
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Character::serialise>: Saved last direction: 
+DEBUG <Character::serialise>: ***Data saved!
+DEBUG <GameObject(is)>: Reading objects id: 666
+DEBUG <GameObject(is)>: Reading sprite position.x: 0.000000
+DEBUG <GameObject(is)>: Reading sprite position.y: 0.000000
+DEBUG <GameObject(is)>: Reading file name
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 35
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][p][l][a][y][e][r][.][p][n][g]
+DEBUG <ReadString>: String read:
+resources/images/texture_player.png
+
+DEBUG <GameObject(is)>: File name read:
+resources/images/texture_player.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <GameObject(is)>: Data recovered!
+DEBUG <Character::Character(is)>: ***** Loading data! *****
+DEBUG <Character::Character(is)>: Reading rotation: 0.000000
+DEBUG <Character::Character(is)>: Reading maxVelocity: 2000.000000
+DEBUG <Character::Character(is)>: Reading velocity.x: 0.000000
+DEBUG <Character::Character(is)>: Reading velocity.y: 0.000000
+DEBUG <Character::Character(is)>: Reading targetPosition.x: 0.000000
+DEBUG <Character::Character(is)>: Reading targetPosition.y: 0.000000
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 0
+
+DEBUG <ReadString>: String read:
+
+DEBUG <Character::Character(is)>: Read last direction: 
+DEBUG <Character::Character(is)>: ***** Data loaded! *****
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_ammo.png
+DEBUG<Projectile::Projectile(): Projectile initializedDEBUG <Projectile::serialise>: ***Saving data!
+DEBUG <GameObject::serialise(is)>: Saving objects id 3452816845
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_ammo.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_ammo.png'
+DEBUG <SerialiseString>: Saving... fSize = 33 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][a][m][m][o][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Projectile::serialise>: Saving rotation: 123.123001
+DEBUG <Projectile::serialise>: Saving maxVelocity: 600.000000
+DEBUG <Projectile::serialise>: Saving velocity.x: 0.000000
+DEBUG <Projectile::serialise>: Saving velocity.y: 0.000000
+DEBUG <Projectile::Projectile(is)>: Saving parentId
+DEBUG <Projectile::serialise>: ***Data saved!
+DEBUG <GameObject(is)>: Reading objects id: 3452816845
+DEBUG <GameObject(is)>: Reading sprite position.x: 0.000000
+DEBUG <GameObject(is)>: Reading sprite position.y: 0.000000
+DEBUG <GameObject(is)>: Reading file name
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 33
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][a][m][m][o][.][p][n][g]
+DEBUG <ReadString>: String read:
+resources/images/texture_ammo.png
+
+DEBUG <GameObject(is)>: File name read:
+resources/images/texture_ammo.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_ammo.png
+DEBUG <GameObject(is)>: Data recovered!
+DEBUG <Projectile::Projectile(is)>: ***Loading data!
+DEBUG <Projectile::Projectile(is)>: Reading rotation: 123.123001
+DEBUG <Projectile::Projectile(is)>: Reading maxVelocity: 600.000000
+DEBUG <Projectile::Projectile(is)>: Reading velocity.x: 0.000000
+DEBUG <Projectile::Projectile(is)>: Reading velocity.y: 0.000000
+DEBUG <Projectile::Projectile(is)>: Reading parentId: 3452816845
+DEBUG <Projectile::Projectile(is)>: ***Data loaded!
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_ammo.png
+DEBUG<Projectile::Projectile(): Projectile initializedDEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_ammo.png
+DEBUG<Projectile::Projectile(): Projectile initializedDEBUG <Projectile::serialise>: ***Saving data!
+DEBUG <GameObject::serialise(is)>: Saving objects id 666
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_ammo.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_ammo.png'
+DEBUG <SerialiseString>: Saving... fSize = 33 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][a][m][m][o][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Projectile::serialise>: Saving rotation: -431602080.000000
+DEBUG <Projectile::serialise>: Saving maxVelocity: 600.000000
+DEBUG <Projectile::serialise>: Saving velocity.x: 0.000000
+DEBUG <Projectile::serialise>: Saving velocity.y: 0.000000
+DEBUG <Projectile::Projectile(is)>: Saving parentId
+DEBUG <Projectile::serialise>: ***Data saved!
+DEBUG <GameObject(is)>: Reading objects id: 666
+DEBUG <GameObject(is)>: Reading sprite position.x: 0.000000
+DEBUG <GameObject(is)>: Reading sprite position.y: 0.000000
+DEBUG <GameObject(is)>: Reading file name
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 33
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][a][m][m][o][.][p][n][g]
+DEBUG <ReadString>: String read:
+resources/images/texture_ammo.png
+
+DEBUG <GameObject(is)>: File name read:
+resources/images/texture_ammo.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_ammo.png
+DEBUG <GameObject(is)>: Data recovered!
+DEBUG <Projectile::Projectile(is)>: ***Loading data!
+DEBUG <Projectile::Projectile(is)>: Reading rotation: -431602080.000000
+DEBUG <Projectile::Projectile(is)>: Reading maxVelocity: 600.000000
+DEBUG <Projectile::Projectile(is)>: Reading velocity.x: 0.000000
+DEBUG <Projectile::Projectile(is)>: Reading velocity.y: 0.000000
+DEBUG <Projectile::Projectile(is)>: Reading parentId: 3452816845
+DEBUG <Projectile::Projectile(is)>: ***Data loaded!
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_tower.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_turret.png
+DEBUG <Turret::Turret()>: Turret initialized
+DEBUG <GameObjectManager::Add>: Turret_3_ added
+DEBUG <Tower::Tower()>: Tower initialized
+DEBUG <Tower::serialise>: ***Saving Tower!
+DEBUG <GameObject::serialise(is)>: Saving objects id 3452816845
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_tower.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tower.png'
+DEBUG <SerialiseString>: Saving... fSize = 34 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][o][w][e][r][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Tower::serialise>: Saving ammoCount: 0
+DEBUG <Tower::serialise>: Saving rotation: 123.123001
+DEBUG <Tower::serialise(os)>: Saving turretId 3452816845
+DEBUG <Tower::serialise>: ***Data saved!
+DEBUG <GameObject(is)>: Reading objects id: 3452816845
+DEBUG <GameObject(is)>: Reading sprite position.x: 0.000000
+DEBUG <GameObject(is)>: Reading sprite position.y: 0.000000
+DEBUG <GameObject(is)>: Reading file name
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 34
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][o][w][e][r][.][p][n][g]
+DEBUG <ReadString>: String read:
+resources/images/texture_tower.png
+
+DEBUG <GameObject(is)>: File name read:
+resources/images/texture_tower.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_tower.png
+DEBUG <GameObject(is)>: Data recovered!
+DEBUG <Tower::Tower(is)>: ***** Loading data! *****
+DEBUG <Tower::Tower(is)>: Reading ammoCount: 0
+DEBUG <Tower::Tower(is)>: Reading rotation: 123.123001
+DEBUG <Tower::Tower(is)>: Reading turretId: 3452816845
+DEBUG <Tower::Tower(is)>: ***** Data loaded! *****
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_tower.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_turret.png
+DEBUG <Turret::Turret()>: Turret initialized
+DEBUG <GameObjectManager::Add>: Turret_4_ added
+DEBUG <Tower::Tower()>: Tower initialized
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_tower.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_turret.png
+DEBUG <Turret::Turret()>: Turret initialized
+DEBUG <GameObjectManager::Add>: Turret_5_ added
+DEBUG <Tower::Tower()>: Tower initialized
+DEBUG <Tower::serialise>: ***Saving Tower!
+DEBUG <GameObject::serialise(is)>: Saving objects id 666
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_tower.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tower.png'
+DEBUG <SerialiseString>: Saving... fSize = 34 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][o][w][e][r][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Tower::serialise>: Saving ammoCount: 0
+DEBUG <Tower::serialise>: Saving rotation: 0.000000
+DEBUG <Tower::serialise(os)>: Saving turretId 3452816845
+DEBUG <Tower::serialise>: ***Data saved!
+DEBUG <GameObject(is)>: Reading objects id: 666
+DEBUG <GameObject(is)>: Reading sprite position.x: 0.000000
+DEBUG <GameObject(is)>: Reading sprite position.y: 0.000000
+DEBUG <GameObject(is)>: Reading file name
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 34
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][o][w][e][r][.][p][n][g]
+DEBUG <ReadString>: String read:
+resources/images/texture_tower.png
+
+DEBUG <GameObject(is)>: File name read:
+resources/images/texture_tower.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_tower.png
+DEBUG <GameObject(is)>: Data recovered!
+DEBUG <Tower::Tower(is)>: ***** Loading data! *****
+DEBUG <Tower::Tower(is)>: Reading ammoCount: 0
+DEBUG <Tower::Tower(is)>: Reading rotation: 0.000000
+DEBUG <Tower::Tower(is)>: Reading turretId: 3452816845
+DEBUG <Tower::Tower(is)>: ***** Data loaded! *****
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_turret.png
+DEBUG <Turret::Turret()>: Turret initialized
+DEBUG <Turret::serialise>: ***Saving Turret!
+DEBUG <GameObject::serialise(is)>: Saving objects id 3452816845
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][u][r][r][e][t][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Turret::serialise>: Saving rotation: 123.123001
+DEBUG <Turret::serialise>: ***Data saved!
+DEBUG <GameObject(is)>: Reading objects id: 3452816845
+DEBUG <GameObject(is)>: Reading sprite position.x: 0.000000
+DEBUG <GameObject(is)>: Reading sprite position.y: 0.000000
+DEBUG <GameObject(is)>: Reading file name
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 35
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][u][r][r][e][t][.][p][n][g]
+DEBUG <ReadString>: String read:
+resources/images/texture_turret.png
+
+DEBUG <GameObject(is)>: File name read:
+resources/images/texture_turret.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_turret.png
+DEBUG <GameObject(is)>: Data recovered!
+DEBUG <Turret::Turret(is)>: ***** Loading data! *****
+DEBUG <Turret::Turret(is)>: Reading rotation: 123.123001
+DEBUG <Turret::Turret(is)>: ***** Data loaded! *****
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_turret.png
+DEBUG <Turret::Turret()>: Turret initialized
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_turret.png
+DEBUG <Turret::Turret()>: Turret initialized
+DEBUG <Turret::serialise>: ***Saving Turret!
+DEBUG <GameObject::serialise(is)>: Saving objects id 666
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][u][r][r][e][t][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Turret::serialise>: Saving rotation: 0.000000
+DEBUG <Turret::serialise>: ***Data saved!
+DEBUG <GameObject(is)>: Reading objects id: 666
+DEBUG <GameObject(is)>: Reading sprite position.x: 0.000000
+DEBUG <GameObject(is)>: Reading sprite position.y: 0.000000
+DEBUG <GameObject(is)>: Reading file name
+DEBUG <ReadString>: Reading file name
+DEBUG <ReadString>: Size = 35
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][u][r][r][e][t][.][p][n][g]
+DEBUG <ReadString>: String read:
+resources/images/texture_turret.png
+
+DEBUG <GameObject(is)>: File name read:
+resources/images/texture_turret.png
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_turret.png
+DEBUG <GameObject(is)>: Data recovered!
+DEBUG <Turret::Turret(is)>: ***** Loading data! *****
+DEBUG <Turret::Turret(is)>: Reading rotation: 0.000000
+DEBUG <Turret::Turret(is)>: ***** Data loaded! *****
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObjectManager::Add>: Character_6_ added
+DEBUG <GameObjectManager::Remove>: Removing game object 'Character_6_'
+DEBUG <GameObjectManager::Remove>: Removed GameObject!
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObjectManager::Add>: Character_7_ added
+DEBUG <GameObjectManager::Add>: Character_8_ added
+DEBUG <GameObjectManager::Remove>: Removing game object 'Character_7_'
+DEBUG <GameObjectManager::Remove>: Removed GameObject!
+DEBUG <GameObjectManager::Remove>: Removing game object 'Character_8_'
+DEBUG <GameObjectManager::Remove>: Removed GameObject!
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObjectManager::Add>: Character_9_ added
+DEBUG <GameObjectManager::Remove>: Removing game object 'Character_9_'
+DEBUG <GameObjectManager::Remove>: Removed GameObject!
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObjectManager::Add>: Character_10_ added
+DEBUG <GameObjectManager::Remove>: Removing game object 'Character_10_'
+DEBUG <GameObjectManager::Remove>: Removed GameObject!
+DEBUG <GameObject::Load>: SUCCESS! Filename = resources/images/texture_player.png
+DEBUG <Character::Character()>: Character initialized
+DEBUG <GameObjectManager::Add>: Character_11_ added
+DEBUG <GameObjectManager::Remove>: Removing game object 'Character_11_'
+DEBUG <GameObjectManager::Remove>: Removed GameObject!
+DEBUG <Game::SaveGame>: Opened binary stream to 'savegame.dat'!
+DEBUG <SerialiseString>: Saving string: 'ab'
+DEBUG <SerialiseString>: Saving... fSize = 2 strData[1] = b
+[a][b]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <SerialiseString>: Saving string: 'cd'
+DEBUG <SerialiseString>: Saving... fSize = 2 strData[1] = d
+[c][d]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <GameObjectManager::SaveGame>: objectId = 12
+DEBUG <GameObjectManager::SaveGame>: amout = 6
+DEBUG <GameObjectManager::SaveGame>: type = Character
+DEBUG <SerialiseString>: Saving string: 'Character'
+DEBUG <SerialiseString>: Saving... fSize = 9 strData[1] = h
+[C][h][a][r][a][c][t][e][r]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Character::serialise>: ***Saving Character!
+DEBUG <GameObject::serialise(is)>: Saving objects id 0
+DEBUG <GameObject::serialise>: Saving sprite position.x: 50.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 350.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_player.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_player.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][p][l][a][y][e][r][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Character::serialise>: Saved rotation: 0.000000
+DEBUG <Character::serialise>: Saved maxVelocity: 2000.000000
+DEBUG <Character::serialise>: Saved velocity.x: 0.000000
+DEBUG <Character::serialise>: Saved velocity.y: 0.000000
+DEBUG <Character::serialise>: Saved targetPosition.x: 1.000000
+DEBUG <Character::serialise>: Saved targetPosition.y: 4.000000
+DEBUG <SerialiseString>: Saving string: ''
+DEBUG <SerialiseString>: Saving... fSize = 0 strData[1] = Ì
+
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Character::serialise>: Saved last direction: 
+DEBUG <Character::serialise>: ***Data saved!
+DEBUG <GameObjectManager::SaveGame>: type = Tower
+DEBUG <SerialiseString>: Saving string: 'Tower'
+DEBUG <SerialiseString>: Saving... fSize = 5 strData[1] = o
+[T][o][w][e][r]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tower::serialise>: ***Saving Tower!
+DEBUG <GameObject::serialise(is)>: Saving objects id 2
+DEBUG <GameObject::serialise>: Saving sprite position.x: 350.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 250.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_tower.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tower.png'
+DEBUG <SerialiseString>: Saving... fSize = 34 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][o][w][e][r][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Tower::serialise>: Saving ammoCount: 0
+DEBUG <Tower::serialise>: Saving rotation: 0.000000
+DEBUG <Tower::serialise(os)>: Saving turretId 1
+DEBUG <Tower::serialise>: ***Data saved!
+DEBUG <GameObjectManager::SaveGame>: type = Turret
+DEBUG <SerialiseString>: Saving string: 'Turret'
+DEBUG <SerialiseString>: Saving... fSize = 6 strData[1] = u
+[T][u][r][r][e][t]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Turret::serialise>: ***Saving Turret!
+DEBUG <GameObject::serialise(is)>: Saving objects id 1
+DEBUG <GameObject::serialise>: Saving sprite position.x: 350.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 250.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][u][r][r][e][t][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Turret::serialise>: Saving rotation: 161.565048
+DEBUG <Turret::serialise>: ***Data saved!
+DEBUG <GameObjectManager::SaveGame>: type = Turret
+DEBUG <SerialiseString>: Saving string: 'Turret'
+DEBUG <SerialiseString>: Saving... fSize = 6 strData[1] = u
+[T][u][r][r][e][t]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Turret::serialise>: ***Saving Turret!
+DEBUG <GameObject::serialise(is)>: Saving objects id 3
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][u][r][r][e][t][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Turret::serialise>: Saving rotation: 0.000000
+DEBUG <Turret::serialise>: ***Data saved!
+DEBUG <GameObjectManager::SaveGame>: type = Turret
+DEBUG <SerialiseString>: Saving string: 'Turret'
+DEBUG <SerialiseString>: Saving... fSize = 6 strData[1] = u
+[T][u][r][r][e][t]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Turret::serialise>: ***Saving Turret!
+DEBUG <GameObject::serialise(is)>: Saving objects id 4
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][u][r][r][e][t][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Turret::serialise>: Saving rotation: 0.000000
+DEBUG <Turret::serialise>: ***Data saved!
+DEBUG <GameObjectManager::SaveGame>: type = Turret
+DEBUG <SerialiseString>: Saving string: 'Turret'
+DEBUG <SerialiseString>: Saving... fSize = 6 strData[1] = u
+[T][u][r][r][e][t]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Turret::serialise>: ***Saving Turret!
+DEBUG <GameObject::serialise(is)>: Saving objects id 5
+DEBUG <GameObject::serialise>: Saving sprite position.x: 0.000000
+DEBUG <GameObject::serialise>: Saving sprite position.y: 0.000000
+DEBUG <GameObject::serialise>: Saving filename: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_turret.png'
+DEBUG <SerialiseString>: Saving... fSize = 35 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][u][r][r][e][t][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+
+DEBUG <GameObject::serialise>: Filename saved
+DEBUG <GameObject::serialise>: All data serialized!
+DEBUG <Turret::serialise>: Saving rotation: 0.000000
+DEBUG <Turret::serialise>: ***Data saved!
+DEBUG <GameObjectManager::SaveGame>: Saved game objects!
+DEBUG <SerialiseString>: Saving string: 'ef'
+DEBUG <SerialiseString>: Saving... fSize = 2 strData[1] = f
+[e][f]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_begin.png'
+DEBUG <SerialiseString>: Saving... fSize = 44 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][b][e][g][i][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (50, 350)
+DEBUG <TileRoad::serialise>: Data saved (1, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (150, 350)
+DEBUG <TileRoad::serialise>: Data saved (2, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (250, 350)
+DEBUG <TileRoad::serialise>: Data saved (3, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (350, 350)
+DEBUG <TileRoad::serialise>: Data saved (4, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (350, 450)
+DEBUG <TileRoad::serialise>: Data saved (4, 5)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (450, 450)
+DEBUG <TileRoad::serialise>: Data saved (5, 5)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (550, 250)
+DEBUG <TileRoad::serialise>: Data saved (6, 3)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (550, 350)
+DEBUG <TileRoad::serialise>: Data saved (6, 4)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_turn.png'
+DEBUG <SerialiseString>: Saving... fSize = 43 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][t][u][r][n][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (550, 450)
+DEBUG <TileRoad::serialise>: Data saved (6, 5)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.][p][n][g]
+DEBUG <SerialiseString>: Filename saved
+DEBUG <Tile::serialise>: All data serialized (650, 250)
+DEBUG <TileRoad::serialise>: Data saved (7, 3)
+DEBUG <SerialiseString>: Saving string: 'resources/images/texture_tile_road_straigth.png'
+DEBUG <SerialiseString>: Saving... fSize = 47 strData[1] = e
+[r][e][s][o][u][r][c][e][s][/][i][m][a][g][e][s][/][t][e][x][t][u][r][e][_][t][i][l][e][_][r][o][a][d][_][s][t][r][a][i][g][t][h][.

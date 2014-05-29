@@ -1,0 +1,37 @@
+******* UNIT TESTS *******
+Game::Get/SetViewPosition	= PASS
+Game::getScreenWidth/Heigth	= PASS
+Game::GetGameObjectManager	= PASS
+Game::GetTileManager		= PASS
+Game::Save&LoadGame		= PASS
+GameObject::Set/Get rotation	= PASS
+GameObject::Set/Get velocity	= PASS
+GameObject::Set/Get object id	= PASS
+Character::Save&Load		= PASS
+Character::GetType		= PASS
+Character::Serialise & Load constructor	= PASS
+Projectile::Save&Load		= PASS
+Projectile::GetType		= PASS
+Projectile::Serialise & Load constructor	= PASS
+Tower::Save&Load		= PASS
+Tower::GetType			= PASS
+Tower::Serialise & Load constructor	= PASS
+Turret::Save&Load		= PASS
+Turret::GetType			= PASS
+Turret::Serialise & Load constructor	= PASS
+GameObjectManager::Add		= PASS
+GameObjectManager::CheckMovable	= PASS
+GameObjectManager::GetByType	= PASS
+GameObjectManager::GetById	= PASS
+GameObjectManager::GetByPosition	= PASS
+SaveGameManager::Save/LoadGame		= PASS
+SaveGameManager::Serialise/Read string	= PASS
+SaveGameManager::Pre load game objects	= PASS
+SaveGameManager::Post load game objects	= PASS
+TileManager::CheckMovable		= PASS
+TileManager::GetStartPosition		= PASS
+Tile::GetMovable			= PASS
+Tile::GetMovableDirections		= PASS
+TileRoad::Serialise & Load constructor	= PASS
+******* UNIT TESTS *******
+
