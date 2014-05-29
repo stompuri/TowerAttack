@@ -4,8 +4,8 @@ The idea for this game is to reverse the roels in the game genre of tower defend
 
 The development for this game started via the game engine architecture course organized by the University of Helsinki (Computer Science). The course project included development of the persistence (save/load) system. After the course I continued the development to create a computer version of the board game I had developed earlier.
 
-Status: Development going on, first alpha almost ready...
-Platform: Windows
-Programming language: C++
-Graphics & Sounds: SFML 2.0 (Simple Fast Multimedia Library) API for OpenGL
-LOC atm: 6219 (classes 29 pieces atm)
+- Status: Development going on, first alpha almost ready...
+- Platform: Windows
+- Programming language: C++
+- Graphics & Sounds: SFML 2.0 (Simple Fast Multimedia Library) API for OpenGL
+- LOC atm: 6219 (classes 29 pieces atm)
