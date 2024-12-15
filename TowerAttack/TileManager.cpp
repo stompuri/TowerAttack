@@ -13,25 +13,29 @@ namespace TA
 		endTilePos.y = NULL;
 	}
 
-
 	TileManager::~TileManager()
 	{
 		// Use lambda to delete each tile object if the Manager is deleted
 		std::for_each(tileMap.begin(),tileMap.end(),
 			[] (std::pair<Key, std::shared_ptr<TA::Tile>> p) { p.second.reset(); }
 			);
-		//commented1 std::cout << "DEBUG <TileManager::~TileManager>: Tiles deleted\n";
+
+		std::for_each(towerPlaces.begin(), towerPlaces.end(),
+			[](std::pair<Key, std::shared_ptr<TA::Tile>> p) { p.second.reset(); }
+		);
+
+		// std::cout << "DEBUG <TileManager::~TileManager>: Tiles deleted\n";
 	}
 
 	void TileManager::GenerateMap()
 	{
 		/* Random map generator
 		First saves the tile amounts in two dimensional array.
-		Then picks up the tiles in random order & place the in the map.
+		Then picks up the tiles in random order & place them in the map.
 		We have the starting tile (straigth road) at position x=1, y=3
 
 		Tile type: 0 1 (0 = straigth road, 1 = turning road)
-		Amout:     3 3
+		Amount:     3 3
 		*/
 		
 		unsigned int _tileAmount = 7;
@@ -47,8 +51,8 @@ namespace TA
 		//commented1 std::cout << "\n";
 
 		// Set the start tile
-		int _x = 1;
-		int _y = 3;
+		unsigned int _x = 1;
+		unsigned int _y = 6;
 		std::shared_ptr<TileRoad> _tile(new TileRoad(99, _x, _y)); // Type of the tile, x, y
 		Add(_x, _y, _tile);
 		lastPlacedTile = _tile;
@@ -77,7 +81,7 @@ namespace TA
 		}
 		
 		// Place the end tile
-		//commented1 std::cout << "DEBUG <TileManager::GenerateMap> lastDirection = " << lastDirection << " last.x = " << lastPlacedTile->getX() << " last.y = " << lastPlacedTile->getY() << " type = " << lastPlacedTile->GetTileType() << "\n";
+		std::cout << "DEBUG <TileManager::GenerateMap> lastDirection = " << lastDirection << " last.x = " << lastPlacedTile->getX() << " last.y = " << lastPlacedTile->getY() << " type = " << lastPlacedTile->GetTileType() << "\n";
 		_x = lastPlacedTile->getX();
 		_y = lastPlacedTile->getY();
 		if(lastPlacedTile->GetMovable("right") && lastDirection != "right")
@@ -114,7 +118,7 @@ namespace TA
 		while(itr != tileMap.end())
 		{
 			TileRoad* _ptr_tile = dynamic_cast<TileRoad*>(itr->second.get());
-			//commented1 std::cout << "Tile x = " << _ptr_tile->getX() << " y = " << _ptr_tile->getY() << " type = " << _ptr_tile->GetTileType() << "\n";
+			//std::cout << "Tile x = " << _ptr_tile->getX() << " y = " << _ptr_tile->getY() << " type = " << _ptr_tile->GetTileType() << "\n";
 			tileList.push_back(Key(_ptr_tile->getX(), _ptr_tile->getY()));
 			if (_ptr_tile->getX() < _minX) _minX = _ptr_tile->getX();
 			if (_ptr_tile->getX() > _maxX) _maxX = _ptr_tile->getX();
@@ -123,7 +127,8 @@ namespace TA
 			itr++;
 		}
 		
-		//commented1 std::cout << "DEBUG1 Tile minX = " << _minX << " minY = " << _minY << " maxX = " << _maxX << " maxY = " << _maxY << "\n";
+		//std::cout << "DEBUG1 Tile minX = " << _minX << " minY = " << _minY << " maxX = " << _maxX << " maxY = " << _maxY << "\n";
+
 		// Go through the map tiles & set sprite positions according to tile x, y coordinates
 		// +fix the key (delete the old tileMap input & add a new one)
 		Mapa tempTileMap; // temp version of tilemap
@@ -136,7 +141,7 @@ namespace TA
 
 			_ptr_tile->setX(_ptr_tile->getX()-(_minX-1));
 			_ptr_tile->setY(_ptr_tile->getY()-(_minY-1));
-			//commented1 std::cout << "DEBUG2 Tile x = " << _ptr_tile->getX() << " y = " << _ptr_tile->getY() << "\n";
+			//std::cout << "DEBUG2 Tile x = " << _ptr_tile->getX() << " y = " << _ptr_tile->getY() << "\n";
 			_ptr_tile->SetSpritePosition(float(_ptr_tile->getX()*tileWidth-50), float(_ptr_tile->getY()*tileWidth-50));
 
 			Key newKey (_ptr_tile->getX(), _ptr_tile->getY());
@@ -156,13 +161,13 @@ namespace TA
 		tempTileMap.clear();
 		
 		// print map for debugging
-		/*itr = tileMap.begin();
+		itr = tileMap.begin();
 		while(itr != tileMap.end())
 		{
 			TileRoad* _ptr_tile = dynamic_cast<TileRoad*>(itr->second.get());
-			std::cout << "Tile x = " << _ptr_tile->getX() << " y = " << _ptr_tile->getY() << " type = " << _ptr_tile->GetTileType() << "\n";
+			//std::cout << "Tile x = " << _ptr_tile->getX() << " y = " << _ptr_tile->getY() << " type = " << _ptr_tile->GetTileType() << "\n";
 			itr++;
-		}*/
+		}
 
 		// Set the points for tiles (for scoring points)
 		// Go through the route from end towards start and set points: 10-8-6-4-3-2-1 (15 for reaching finish)
@@ -173,12 +178,12 @@ namespace TA
 		{
 			it->get()->SetPoints(_points[_counter]);
 			_counter++;
-			//commented1 std::cout << "<DEBUG TileManager::GenerateMap> Tile x = " << it->get()->getX() << " y = " << it->get()->getY() << " points = " << it->get()->GetPoints() << "\n";
+			//std::cout << "<DEBUG TileManager::GenerateMap> Tile x = " << it->get()->getX() << " y = " << it->get()->getY() << " points = " << it->get()->GetPoints() << "\n";
 
 			it++;
 		}
 
-		//commented1 std::cout << "DEBUG <TileManager::GenerateMap>: Map generated\n";
+		std::cout << "DEBUG <TileManager::GenerateMap>: Map generated\n";
 	}
 
 	void TileManager::AddTile(unsigned int _type)
@@ -290,7 +295,7 @@ namespace TA
 		Mapa::const_iterator itr = tileMap.begin();
 		while(itr != tileMap.end())
 		{
-			//commented1 std::cout << "DEBUG <TileManager::Add>: Tile drawn (" << itr->second->GetSpritePosition().x << ", " << itr->second->GetSpritePosition().y << "\n"; 
+			// std::cout << "DEBUG <TileManager::Add>: Tile drawn (" << itr->second->GetSpritePosition().x << ", " << itr->second->GetSpritePosition().y << "\n"; 
 			Drawer::DrawTile(std::dynamic_pointer_cast<TileRoad>(itr->second));
 			itr++;
 		}
@@ -442,7 +447,7 @@ namespace TA
 			TileRoad* _ptr_tile = dynamic_cast<TileRoad*>(itr->second.get());
 
 			// Jump over the start tile and the end tile
-			if(_ptr_tile->GetTileType() != 99 && _ptr_tile->GetTileType() != 100)
+			if(_ptr_tile->GetTileType() != Game::TileType::StartTile && _ptr_tile->GetTileType() != Game::TileType::EndTile)
 			{
 				// Go through the road and check the tiles around it
 				// & Create a list of possible turret places (next to road)
@@ -463,12 +468,14 @@ namespace TA
 					}
 
 					_findKey = Key(_ptr_tile->getX()-x, _ptr_tile->getY()-y);
-					//std::cout << "TileManager: size = " << Game::GetGameObjectManager()->GetByPosition(_findKey.first, _findKey.second).size() << "\n";
-					// TODO NULL is not enough, have to check for other towers also
-					// 1) No tile is found, 2) this tile has not been inserted yet in templist, 3) No other objects in this tile (TODO)
+					std::cout << "TileManager:GetTowerPlacement - X = " << _findKey.first << " Y = " << _findKey.second << "\n";
+
+					// 1) No tile is found, 2) this tile has not been inserted yet in templist, 3) No other objects in this tile
 					if(	Get(_findKey) == NULL &&
 						_tempList.find(_findKey) == _tempList.end() &&
-						Game::GetGameObjectManager()->GetByPosition(int(_findKey.first), int(_findKey.second)).size() == 0)
+						Game::GetGameObjectManager()->GetByPosition(int(_findKey.first), int(_findKey.second)).size() == 0 &&
+						towerPlaces.find(_findKey) == towerPlaces.end()
+						)
 					{
 						//std::cout << "TileManager: " << _findKey.first << "/" << _findKey.second << " size = " << Game::GetGameObjectManager()->GetByPosition(int(_findKey.first), int(_findKey.second)).size() << "\n";
 						_tempList.insert(std::make_pair(_findKey, std::to_string(_ptr_tile->getX()-x) + std::to_string(_ptr_tile->getY()-y)));
@@ -519,6 +526,9 @@ namespace TA
 			_itr++;
 		}
 		_retu = sf::Vector2i(_itr->first.first, _itr->first.second);
+
+		std::shared_ptr<TileTower> _tile(new TileTower(_itr->first.first, _itr->first.second));
+		towerPlaces.insert(std::make_pair(Key(_itr->first.first, _itr->first.second), _tile));
 
 		return _retu;
 	}

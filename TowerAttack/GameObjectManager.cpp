@@ -22,7 +22,7 @@ namespace TA
 	unsigned int GameObjectManager::Add(std::string _name, std::shared_ptr<GameObject> _ptr_gameObject)
 	{
 		std::string _idname = _name.append("_" + std::to_string(objectId) + "_");
-		if(debug) if(debug) std::cout << "DEBUG <GameObjectManager::Add>: " << _idname << " added\n";
+		if(debug) std::cout << "DEBUG <GameObjectManager::Add>: " << _idname << " added\n";
 		gameObjects.insert(std::pair<std::string,std::shared_ptr<GameObject>>(_idname, _ptr_gameObject));
 		objectId++;
 		return objectId-1;
@@ -50,6 +50,7 @@ namespace TA
 
 	std::shared_ptr<GameObject> GameObjectManager::Get(std::string name)
 	{
+		//if(debug) std::cout << "DEBUG <GameObjectManager::Get> Finding with: " << name << "gameObjects.size = " << gameObjects.size() << "\n";
 		std::map<std::string, std::shared_ptr<GameObject>>::const_iterator results = gameObjects.find(name);
 		if(results == gameObjects.end() ) {
 			if(debug) std::cout << "DEBUG <GameObjectManager::Get>: Didn't find GameObject!\n";
@@ -98,7 +99,7 @@ namespace TA
 		return NULL;
 	}
 
-	std::vector<std::shared_ptr<GameObject>> GameObjectManager::GetByPosition(int _x, int _y)
+	/*std::vector<std::shared_ptr<GameObject>> GameObjectManager::GetByPosition(int _x, int _y)
 	{
 		std::vector<std::shared_ptr<GameObject>> _selectedObjects;
 
@@ -117,7 +118,7 @@ namespace TA
 		}
 
 		return _selectedObjects;
-	}
+	}*/
 
 	std::vector<std::shared_ptr<GameObject>> GameObjectManager::GetByPosition(float _x, float _y)
 	{
@@ -337,7 +338,7 @@ namespace TA
 					// Reset placement for drawing units
 					Drawer::ResetPlacement();
 
-					// Add some unit points
+					// Add unit points
 					Game::AddAttackPoints(Game::GetPlayRound() * 3);
 
 					// Add money
@@ -422,7 +423,7 @@ namespace TA
 				// Go through all the character objects and check if they are heading towards x,y
 				if (itr->second->GetType().find("Character") != std::string::npos)
 				{
-					//std::cout << _roundedX1 << "/" << _roundedY1 << ": " << !std::dynamic_pointer_cast<Character>(itr->second)->GetArrived() << " " << std::dynamic_pointer_cast<Character>(itr->second)->GetTarget().x << "/" << std::dynamic_pointer_cast<Character>(itr->second)->GetTarget().y << "\n";
+					//if(debug) std::cout << _roundedX1 << "/" << _roundedY1 << ": " << !std::dynamic_pointer_cast<Character>(itr->second)->GetArrived() << " " << std::dynamic_pointer_cast<Character>(itr->second)->GetTarget().x << "/" << std::dynamic_pointer_cast<Character>(itr->second)->GetTarget().y << "\n";
 					if (!std::dynamic_pointer_cast<Character>(itr->second)->GetArrived() && // object is travelling
 						std::dynamic_pointer_cast<Character>(itr->second)->GetTarget().x == _roundedX1 && // object is travelling towards the same x
 						std::dynamic_pointer_cast<Character>(itr->second)->GetTarget().y == _roundedY1) // object is travelling towards the same y

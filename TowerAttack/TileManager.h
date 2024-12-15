@@ -3,6 +3,7 @@
 #include "Tile.h" // This class manages tile objects
 //#include "Game.h"
 #include "TileRoad.h"
+#include "TileTower.h"
 #include "Serialise.h"
 
 #include "stdafx.h"
@@ -45,7 +46,7 @@ namespace TA
 		typedef std::pair<unsigned int, unsigned int> Key;
 		typedef std::map<Key, std::shared_ptr<Tile>> Mapa;
 		Mapa tileMap; // Mapping tiles in game board
-		Mapa towerPlaces; // Possible places for defence towers
+		Mapa towerPlaces; // Places of the defence towers
 
 		std::shared_ptr<Tile> Get(Key _key); // Get tile by key
 

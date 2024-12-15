@@ -136,7 +136,7 @@ namespace TA
 
 	void Character::TakeHit(unsigned int _damage)
 	{
-		unsigned int _leftDamage = _damage;
+		int _leftDamage = _damage;
 		if(debug) std::cout << "Left damage = " << _leftDamage << " shield = " << shield.currentValue << "\n";
 
 		// 1) Reduce the shield according to the damage taken
@@ -154,9 +154,9 @@ namespace TA
 		if(debug) std::cout << "Left damage = " << _leftDamage << " shield = " << shield.currentValue << " amor = " << armor << "\n";
 
 		// 2) Reduce the armor according to the left damage
-		if(_leftDamage > 0 && armor > 0)
+		if((unsigned)_leftDamage > 0 && armor > 0)
 		{
-			if(_leftDamage > armor)
+			if((unsigned)_leftDamage > armor)
 			{
 				_leftDamage -= armor;
 				armor = 0;
@@ -302,7 +302,7 @@ namespace TA
 						// Make sure the character object is located at the center of the target tile
 						SetPosition(targetPosition.x*_tileWidth-50, targetPosition.y*_tileWidth-50);
 
-						//commented1 if(debug) std::cout << "DEBUG<" << GetObjectId() << "> speed = travelledTiles: " << speed << " == " << travelledTiles << "\n";
+						if(debug) std::cout << "DEBUG<" << GetObjectId() << "> speed = travelledTiles: " << speed << " == " << travelledTiles << "\n";
 						if(speed == travelledTiles)
 						{
 							if(debug) std::cout << "READY\n";
@@ -319,7 +319,7 @@ namespace TA
 					}
 				} else if(Game::GetGoMark() && gameTurn <= Game::GetPlayTurn()) {
 					// WE'RE AT THE START TILE & GET THE START SIGNAL->START THE JOURNEY!
-					//commented1 if(debug) std::cout << "DEBUG<Character " << GetObjectId() << ">: Start the journey (towards the next tile)!\n";
+					if(debug) std::cout << "DEBUG<Character " << GetObjectId() << ">: Start the journey (towards the next tile)!\n";
 
 					// Make sure the character object is located at the center of the target tile
 					SetPosition(targetPosition.x*_tileWidth-50, targetPosition.y*_tileWidth-50);
@@ -337,7 +337,7 @@ namespace TA
 	{
 		_location.x = float(floor(_location.x + 0.5));
 		_location.y = float(floor(_location.y + 0.5));
-		//commented1 if(debug) std::cout << "DEBUG <Character::SetNextDirection> x = " << _location.x << " y = " << _location.y << "\n";
+		if(debug) std::cout << "DEBUG <Character::SetNextDirection> x = " << _location.x << " y = " << _location.y << "\n";
 		velocity.x = 0.0f;
 		velocity.y = 0.0f;
 
@@ -411,8 +411,8 @@ namespace TA
 			}
 
 			moveClock.restart();
-			//commented1 if(debug) std::cout << "Character: Pressed LEFT, speed = " << speed << "velocity = " << velocity.x << " rotation = " << rotation << "\n";
-			//commented1 if(debug) std::cout << "DE: posX = " << GetSprite().getPosition().x << " posY = " << GetSprite().getPosition().x << " targetX = " << targetPosition.x << " targetY = " << targetPosition.y << "\n";
+			if(debug) std::cout << "Character: Pressed LEFT, speed = " << speed << "velocity = " << velocity.x << " rotation = " << rotation << "\n";
+			if(debug) std::cout << "DE: posX = " << GetSprite().getPosition().x << " posY = " << GetSprite().getPosition().x << " targetX = " << targetPosition.x << " targetY = " << targetPosition.y << "\n";
 		}
 		else if(_direction == "right")
 		{
@@ -430,8 +430,8 @@ namespace TA
 			}
 						
 			moveClock.restart();
-			//commented1 if(debug) std::cout << "DE: posX = " << GetSprite().getPosition().x << " posY = " << GetSprite().getPosition().x << " targetX = " << targetPosition.x << " targetY = " << targetPosition.y << "\n";
-			//commented1 if(debug) std::cout << "DEBUG <Character>: Pressed RIGHT, speed = " << speed << " velocity = " << velocity.x << " rotation = " << rotation << "\n";
+			if(debug) std::cout << "DE: posX = " << GetSprite().getPosition().x << " posY = " << GetSprite().getPosition().x << " targetX = " << targetPosition.x << " targetY = " << targetPosition.y << "\n";
+			if(debug) std::cout << "DEBUG <Character>: Pressed RIGHT, speed = " << speed << " velocity = " << velocity.x << " rotation = " << rotation << "\n";
 		}
 		else if(_direction == "up")
 		{
@@ -449,9 +449,9 @@ namespace TA
 			}
 
 			moveClock.restart();
-			//commented1 if(debug) std::cout << "DE: posX = " << GetSprite().getPosition().x << " posY = " << GetSprite().getPosition().x << " targetX = " << targetPosition.x << " targetY = " << targetPosition.y << "\n";
-			//commented1 if(debug) std::cout << "DE: location.x = " << _location.x << " location.y = " << _location.y << "\n";
-			//commented1 if(debug) std::cout << "DEBUG <Character>: Pressed UP, speed = " << speed << " velocity = " << velocity.y << " rotation = " << rotation << "\n";
+			if(debug) std::cout << "DE: posX = " << GetSprite().getPosition().x << " posY = " << GetSprite().getPosition().x << " targetX = " << targetPosition.x << " targetY = " << targetPosition.y << "\n";
+			if(debug) std::cout << "DE: location.x = " << _location.x << " location.y = " << _location.y << "\n";
+			if(debug) std::cout << "DEBUG <Character>: Pressed UP, speed = " << speed << " velocity = " << velocity.y << " rotation = " << rotation << "\n";
 		}
 		else if(_direction == "down")
 		{
@@ -468,7 +468,7 @@ namespace TA
 				lastDirection = "up";
 			}
 			moveClock.restart();
-			//commented1 if(debug) std::cout << "Character: Pressed DOWN, speed = " << speed << " velocity = " << velocity.y << " rotation = " << rotation << "\n";
+			if(debug) std::cout << "Character: Pressed DOWN, speed = " << speed << " velocity = " << velocity.y << " rotation = " << rotation << "\n";
 		}
 		// New target position found & set
 		arrived = false;

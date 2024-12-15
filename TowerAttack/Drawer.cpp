@@ -63,25 +63,25 @@ namespace TA
 		//if (!gamePlane.create(float(Game::getScreenWidth()), float(Game::getScreenHeigth())))
 		if (!gamePlane.create(unsigned int(Game::getScreenWidth() * 2), unsigned int(Game::getScreenHeigth() * 2)))
 				assert(false);
-		if (!hudPlane.create(unsigned int(Game::getScreenWidth()), unsigned int(Game::getScreenHeigth())))
+		if (!hudPlane.create(Game::getScreenWidth(), Game::getScreenHeigth()))
 				assert(false);
 		if (!upgradePlane.create(Game::getScreenWidth(), Game::getScreenHeigth()))
 				assert(false);
 
 		ptr_structure = std::make_shared<sf::Text>(Game::GetText());
-		ptr_structure->setColor(sf::Color::Black);
+		ptr_structure->setFillColor(sf::Color::Black);
 		ptr_structure->setCharacterSize(16);
 		ptr_armor = std::make_shared<sf::Text>(Game::GetText());
-		ptr_armor->setColor(sf::Color::Red);
+		ptr_armor->setFillColor(sf::Color::Red);
 		ptr_armor->setCharacterSize(16);
 		ptr_shield = std::make_shared<sf::Text>(Game::GetText());
-		ptr_shield->setColor(sf::Color::Blue);
+		ptr_shield->setFillColor(sf::Color::Blue);
 		ptr_shield->setCharacterSize(16);
 		ptr_speed = std::make_shared<sf::Text>(Game::GetText());
-		ptr_speed->setColor(sf::Color::Green);
+		ptr_speed->setFillColor(sf::Color::Green);
 		ptr_speed->setCharacterSize(16);
 		ptr_ammo = std::make_shared<sf::Text>(Game::GetText());
-		ptr_ammo->setColor(sf::Color::Red);
+		ptr_ammo->setFillColor(sf::Color::Red);
 		ptr_ammo->setCharacterSize(18);
 
 		metaRec.setSize(sf::Vector2f(12, 18));
@@ -126,7 +126,7 @@ namespace TA
 		closeRec.setOutlineThickness(1);
 
 		ptr_text = std::make_shared<sf::Text>(Game::GetText());
-		ptr_text->setColor(sf::Color::Red);
+		ptr_text->setFillColor(sf::Color::Red);
 
 		ball.setRadius(7.0f);
 		ball.setOutlineColor(sf::Color::Black);
@@ -140,37 +140,37 @@ namespace TA
 
 		if(menuImage.loadFromFile("resources/images/upgrademenu.png") == false)
 		{
-			if(debug) std::cout << "DEBUG <Drawer::Init>: FAIL!\n";
+			if(debug) std::cout << "DEBUG <GameObject::Init>: FAIL!\n";
 		} else {
 			menuSprite.setTexture(menuImage);
-			if(debug) std::cout << "DEBUG <Drawer::Init>: SUCCESS!\n";
+			if(debug) std::cout << "DEBUG <GameObject::Init>: SUCCESS!\n";
 		}
 		if(imageAtt1.loadFromFile("resources/images/texture_characterSimple.png") == false)
 		{
-			if(debug) std::cout << "DEBUG <Drawer::Init>: FAIL!\n";
+			if(debug) std::cout << "DEBUG <GameObject::Init>: FAIL!\n";
 		} else {
 			spriteAtt1.setTexture(imageAtt1);
-			if(debug) std::cout << "DEBUG <Drawer::Init>: SUCCESS!\n";
+			if(debug) std::cout << "DEBUG <GameObject::Init>: SUCCESS!\n";
 		}
 		if(imageAtt2.loadFromFile("resources/images/texture_characterFast.png") == false)
 		{
-			if(debug) std::cout << "DEBUG <Drawer::Init>: FAIL!\n";
+			if(debug) std::cout << "DEBUG <GameObject::Init>: FAIL!\n";
 		} else {
 			spriteAtt2.setTexture(imageAtt2);
-			if(debug) std::cout << "DEBUG <Drawer::Init>: SUCCESS!\n";
+			if(debug) std::cout << "DEBUG <GameObject::Init>: SUCCESS!\n";
 		}
 		if(imageAtt3.loadFromFile("resources/images/texture_characterHeavy.png") == false)
 		{
-			if(debug) std::cout << "DEBUG <Drawer::Init>: FAIL!\n";
+			if(debug) std::cout << "DEBUG <GameObject::Init>: FAIL!\n";
 		} else {
 			spriteAtt3.setTexture(imageAtt3);
-			if(debug) std::cout << "DEBUG <Drawer::Init>: SUCCESS!\n";
+			if(debug) std::cout << "DEBUG <GameObject::Init>: SUCCESS!\n";
 		}
 	}
 
 	void Drawer::Cleanup()
 	{
-		if(debug) printf("Drawer Cleanup\n");
+		printf("Drawer Cleanup\n");
 	}
 
 	void Drawer::AddPlacement()
@@ -243,10 +243,10 @@ namespace TA
 			DrawBall(_posX+i*24, 304, i < Game::GetBaseCHeavy()->GetLockedUpLevelSpeed());
 		}
 		for(unsigned int i = 0; i < Game::GetBaseCHeavy()->GetUpLevelArmor(); i++) {
-			DrawBall(unsigned int(_posX+i*24), unsigned int(328), i < Game::GetBaseCHeavy()->GetLockedUpLevelArmor());
+			DrawBall(_posX+i*24, 328, i < Game::GetBaseCHeavy()->GetLockedUpLevelArmor());
 		}
 		for(unsigned int i = 0; i < Game::GetBaseCHeavy()->GetUpLevelShield(); i++) {
-			DrawBall(unsigned int(_posX+i*24), unsigned int(352), i < Game::GetBaseCHeavy()->GetLockedUpLevelShield());
+			DrawBall(_posX+i*24, 352, i < Game::GetBaseCHeavy()->GetLockedUpLevelShield());
 		}
 	}
 
@@ -297,27 +297,27 @@ namespace TA
 				if(_ita->GetPlacement() >= Game::GetPlayTurn()) {
 					if(_ita->GetType() == "CharacterSimple") {
 						spriteAtt1.setScale(0.6f, 0.6f);
-						spriteAtt1.setPosition(23.0f, float((_ita->GetPlacement() - placement)*60 + 70));
+						spriteAtt1.setPosition(23, float(static_cast<unsigned int>((_ita->GetPlacement() - placement)*60 + 70)));
 						hudPlane.draw(spriteAtt1);
 
 						if(Game::GetPlayPhase() == "plan") {
-							DrawCloseBox(&hudPlane, 70, unsigned int((_ita->GetPlacement() - placement)*60 + 70));
+							DrawCloseBox(&hudPlane, 70, float(static_cast<unsigned int>((_ita->GetPlacement() - placement)*60 + 70)));
 						}
 					} else if(_ita->GetType() == "CharacterFast") {
 						spriteAtt2.setScale(0.6f, 0.6f);
-						spriteAtt2.setPosition(23.0f, float((_ita->GetPlacement() - placement)*60 + 70));
+						spriteAtt2.setPosition(23, float(static_cast<unsigned int>((_ita->GetPlacement() - placement)*60 + 70)));
 						hudPlane.draw(spriteAtt2);
 							
 						if(Game::GetPlayPhase() == "plan") {
-							DrawCloseBox(&hudPlane, 70, unsigned int((_ita->GetPlacement() - placement)*60 + 70));
+							DrawCloseBox(&hudPlane, 70, float(static_cast<unsigned int>((_ita->GetPlacement() - placement)*60 + 70)));
 						}
 					} else if(_ita->GetType() == "CharacterHeavy") {
 						spriteAtt3.setScale(0.6f, 0.6f);
-						spriteAtt3.setPosition(23.0f, float((_ita->GetPlacement() - placement)*60 + 70));
+						spriteAtt3.setPosition(23, float(static_cast<unsigned int>((_ita->GetPlacement() - placement)*60 + 70)));
 						hudPlane.draw(spriteAtt3);
 							
 						if(Game::GetPlayPhase() == "plan") {
-							DrawCloseBox(&hudPlane, 70, unsigned int((_ita->GetPlacement() - placement)*60 + 70));
+							DrawCloseBox(&hudPlane, 70, static_cast<unsigned int>((_ita->GetPlacement() - placement)*60 + 70));
 						}
 					} else {
 						if(debug) std::cout << "DEBUG: ERROR in drawing unit in attack panel\n";
@@ -435,7 +435,7 @@ namespace TA
 
 	void Drawer::DrawTower(std::shared_ptr<Tower> _tower)
 	{
-		//if(debug) std::cout << "Draw tower x = " << _tower->GetPosition().x << " y = " << _tower->GetPosition().y << "\n";
+		if(debug) std::cout << "Draw tower x = " << _tower->GetPosition().x << " y = " << _tower->GetPosition().y << "\n";
 		gamePlane.draw(_tower->GetSprite());
 		
 		unsigned int _ammo = _tower->GetAmmoCount();

@@ -23,7 +23,7 @@ namespace TA
 		// Load the shader
 		if (!m_shader.loadFromFile("resources/grayer.frag", sf::Shader::Fragment))
 			return false;
-        m_shader.setParameter("texture", sf::Shader::CurrentTexture);
+        m_shader.setUniform("texture", sf::Shader::CurrentTexture);
 
 		return true;
 	}
@@ -32,7 +32,7 @@ namespace TA
 	{
 		m_texture = &_texture;
 		m_sprite.setTexture(m_texture->getTexture());
-		m_shader.setParameter("texture", sf::Shader::CurrentTexture);
+		m_shader.setUniform("texture", sf::Shader::CurrentTexture);
 	}
 
     void Grayer::onDraw(sf::RenderTarget& target, sf::RenderStates states) const

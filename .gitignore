@@ -1,0 +1,48 @@
+# Build-kansiot
+Debug/
+Release/
+x64/
+x86/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.lib
+*.exp
+*.log
+
+# Visual Studio -projektitiedostot
+*.VC.db
+*.VC.opendb
+*.VC.VC.db
+*.ipch
+*.suo
+*.user
+*.userosscache
+*.unsaved
+
+# C++ buildin välimuistitiedostot
+*.pch
+*.idb
+*.tlog
+*.lastbuildstate
+
+# CMake-väliaikaiset tiedostot
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Pakettien välimuisti
+packages/
+.vscode/
+
+# Roskakoritiedostot
+*.tmp
+*.log
+*.log.*
+*.bak
+
+# Muut IDE:en liittyvät tiedostot
+.vs/
+.idea/

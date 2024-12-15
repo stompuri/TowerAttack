@@ -18,10 +18,10 @@ namespace TA
 
 	void StatePlay::Init()
 	{
-		std::cout << "StatePlay Init";
+		printf("StatePlay Init\n");
 
 		// Center view to start tile
-		sf::Vector2f _pos = Game::GetTileManager()->Get(unsigned int(Game::GetTileManager()->GetStartPosition().x), unsigned int(Game::GetTileManager()->GetStartPosition().y))->GetSpritePosition();
+		sf::Vector2f _pos = Game::GetTileManager()->Get(Game::GetTileManager()->GetStartPosition().x, Game::GetTileManager()->GetStartPosition().y)->GetSpritePosition();
 		std::cout << "DEBUG<StatePlay::Init>: Start sprite position x = " << _pos.x << " y = " << _pos.y << "\n";
 		
 		float _startX = _pos.x - Game::GetView().getCenter().x;
@@ -254,7 +254,7 @@ namespace TA
 
 	StatePlay::ClickResult StatePlay::HandleClick(int x, int y)
 	{
-		//std::cout << "JE x = " << x << " y = " << y << "\n";
+		//std::cout << "Mouse clik on x = " << x << " y = " << y << "\n";
 		std::list<ClickItem>::iterator it;
 		for ( it = clickItems.begin(); it != clickItems.end(); it++)
 		{

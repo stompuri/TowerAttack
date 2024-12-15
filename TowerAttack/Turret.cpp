@@ -83,7 +83,7 @@ namespace TA
 			//std::cout << "Turret update2\n";
 			sf::Vector2f _turretPos = GetPosition();
 			// Follow the target defined for the tower
-			sf::Vector2f _targetPos = target._Get()->GetPosition();
+			sf::Vector2f _targetPos = target.lock().get()->GetPosition();
 			float deltaX = _targetPos.x - _turretPos.x;
 			float deltaY = _targetPos.y - _turretPos.y;
 
@@ -110,7 +110,7 @@ namespace TA
 			//std::cout << "Turret update2\n";
 			sf::Vector2f _turretPos = GetPosition();
 			// Follow the target defined for the tower
-			sf::Vector2f _targetPos = target._Get()->GetPosition();
+			sf::Vector2f _targetPos = target.lock().get()->GetPosition();
 			float deltaX = _targetPos.x - _turretPos.x;
 			float deltaY = _targetPos.y - _turretPos.y;
 

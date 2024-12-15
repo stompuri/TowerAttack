@@ -83,6 +83,11 @@ namespace TA
 		static void NextPhase();
 		static void NextPlayRound();
 
+		enum TileType {
+			StartTile = 99,
+			EndTile = 100
+		};
+
 	private:
 		Game() { } // Singleton class: constructor as private
 		static Game* ptr_game; // pointer to our singleton game class

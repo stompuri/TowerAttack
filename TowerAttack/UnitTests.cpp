@@ -689,7 +689,7 @@ namespace TA
 			_placed = true;
 		}
 		_startTile = tlm->GetStartPosition();
-		bool* _startPos = tlm->Get(unsigned int(_startTile.x), unsigned int(_startTile.y))->GetMovableDirections();
+		bool* _startPos = tlm->Get((unsigned)_startTile.x, (unsigned)_startTile.y)->GetMovableDirections();
 		// If GetStartPosition returned the start tile position, we can check the movable directions of it
 		_result = (!_startPos[0] && !_startPos[1] && _startPos[2] && !_startPos[3]);
 		

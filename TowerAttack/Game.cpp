@@ -54,7 +54,7 @@ namespace TA
 		// set the character size
 		textTemp.setCharacterSize(18); // in pixels, not points!
 		// set the color
-		textTemp.setColor(sf::Color::Red);
+		textTemp.setFillColor(sf::Color::Red);
 		// set the text style
 		textTemp.setStyle(sf::Text::Bold);
 

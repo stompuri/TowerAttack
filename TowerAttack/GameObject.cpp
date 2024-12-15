@@ -4,7 +4,7 @@
 
 namespace TA
 {
-	GameObject::GameObject() : isLoaded(false), toBeDeleted(false), velocity(0.0f, 0.0f), maxVelocity(2000.0f)
+	GameObject::GameObject() : id(1), rotation(0.0f), velocity(0.0f, 0.0f), maxVelocity(2000.0f), activePhase(""), gameTurn(1), ready(false), toBeDeleted(false), isLoaded(false)
 	{
 	}
 

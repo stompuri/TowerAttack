@@ -12,6 +12,11 @@ namespace TA
 	std::list<StatePlayUpgrade::ClickItem> StatePlayUpgrade::clickItems; // List the different menu items
 	StatePlayUpgrade::ClickResult StatePlayUpgrade::action;
 
+	const int LVL1_LEFT = 439;
+	const int LVL2_LEFT = 463;
+	const int LVL3_LEFT = 487;
+	const int LVL4_LEFT = 511;
+
 	void StatePlayUpgrade::Init()
 	{
 		printf("StatePlayUpgrade Init\n");
@@ -31,7 +36,7 @@ namespace TA
 		ClickItem simpleSpeed;
 		simpleSpeed.rect.top = 87;
 		simpleSpeed.rect.height = 20;
-		simpleSpeed.rect.left = 437;
+		simpleSpeed.rect.left = LVL1_LEFT;
 		simpleSpeed.rect.width = 20;
 		simpleSpeed.action = SimpleSpeed;
 		simpleSpeed.cost = 2;
@@ -41,7 +46,7 @@ namespace TA
 		ClickItem simpleArmor;
 		simpleArmor.rect.top = 111;
 		simpleArmor.rect.height = 20;
-		simpleArmor.rect.left = 437;
+		simpleArmor.rect.left = LVL1_LEFT;
 		simpleArmor.rect.width = 20;
 		simpleArmor.action = SimpleArmor;
 		simpleArmor.cost = 2;
@@ -51,7 +56,7 @@ namespace TA
 		ClickItem simpleShield;
 		simpleShield.rect.top = 135;
 		simpleShield.rect.height = 20;
-		simpleShield.rect.left = 437;
+		simpleShield.rect.left = LVL1_LEFT;
 		simpleShield.rect.width = 20;
 		simpleShield.action = SimpleShield;
 		simpleShield.cost = 2;
@@ -62,7 +67,7 @@ namespace TA
 		ClickItem fastSpeed1;
 		fastSpeed1.rect.top = 203;
 		fastSpeed1.rect.height = 20;
-		fastSpeed1.rect.left = 437;
+		fastSpeed1.rect.left = LVL1_LEFT;
 		fastSpeed1.rect.width = 20;
 		fastSpeed1.action = FastSpeed;
 		fastSpeed1.cost = 1;
@@ -72,7 +77,7 @@ namespace TA
 		ClickItem fastSpeed2;
 		fastSpeed2.rect.top = 203;
 		fastSpeed2.rect.height = 20;
-		fastSpeed2.rect.left = 461;
+		fastSpeed2.rect.left = LVL2_LEFT;
 		fastSpeed2.rect.width = 20;
 		fastSpeed2.action = FastSpeed;
 		fastSpeed2.cost = 2;
@@ -82,7 +87,7 @@ namespace TA
 		ClickItem fastSpeed3;
 		fastSpeed3.rect.top = 203;
 		fastSpeed3.rect.height = 20;
-		fastSpeed3.rect.left = 485;
+		fastSpeed3.rect.left = LVL3_LEFT;
 		fastSpeed3.rect.width = 20;
 		fastSpeed3.action = FastSpeed;
 		fastSpeed3.cost = 3;
@@ -92,17 +97,17 @@ namespace TA
 		ClickItem fastArmor1;
 		fastArmor1.rect.top = 227;
 		fastArmor1.rect.height = 20;
-		fastArmor1.rect.left = 437;
+		fastArmor1.rect.left = LVL1_LEFT;
 		fastArmor1.rect.width = 20;
 		fastArmor1.action = FastArmor;
-		fastArmor1.cost = 2;
+		fastArmor1.cost = 1;
 		fastArmor1.level = 1;
 		clickItems.push_back(fastArmor1);
 
 		ClickItem fastArmor2;
 		fastArmor2.rect.top = 227;
 		fastArmor2.rect.height = 20;
-		fastArmor2.rect.left = 461;
+		fastArmor2.rect.left = LVL2_LEFT;
 		fastArmor2.rect.width = 20;
 		fastArmor2.action = FastArmor;
 		fastArmor2.cost = 2;
@@ -112,7 +117,7 @@ namespace TA
 		ClickItem fastArmor3;
 		fastArmor3.rect.top = 227;
 		fastArmor3.rect.height = 20;
-		fastArmor3.rect.left = 485;
+		fastArmor3.rect.left = LVL3_LEFT;
 		fastArmor3.rect.width = 20;
 		fastArmor3.action = FastArmor;
 		fastArmor3.cost = 3;
@@ -122,7 +127,7 @@ namespace TA
 		ClickItem fastShield1;
 		fastShield1.rect.top = 251;
 		fastShield1.rect.height = 20;
-		fastShield1.rect.left = 437;
+		fastShield1.rect.left = LVL1_LEFT;
 		fastShield1.rect.width = 20;
 		fastShield1.action = FastShield;
 		fastShield1.cost = 1;
@@ -132,7 +137,7 @@ namespace TA
 		ClickItem fastShield2;
 		fastShield2.rect.top = 251;
 		fastShield2.rect.height = 20;
-		fastShield2.rect.left = 461;
+		fastShield2.rect.left = LVL2_LEFT;
 		fastShield2.rect.width = 20;
 		fastShield2.action = FastShield;
 		fastShield2.cost = 3;
@@ -142,7 +147,7 @@ namespace TA
 		ClickItem fastShield3;
 		fastShield3.rect.top = 251;
 		fastShield3.rect.height = 20;
-		fastShield3.rect.left = 485;
+		fastShield3.rect.left = LVL3_LEFT;
 		fastShield3.rect.width = 20;
 		fastShield3.action = FastShield;
 		fastShield3.cost = 5;
@@ -153,7 +158,7 @@ namespace TA
 		ClickItem heavySpeed1;
 		heavySpeed1.rect.top = 301;
 		heavySpeed1.rect.height = 20;
-		heavySpeed1.rect.left = 437;
+		heavySpeed1.rect.left = LVL1_LEFT;
 		heavySpeed1.rect.width = 20;
 		heavySpeed1.action = HeavySpeed;
 		heavySpeed1.cost = 2;
@@ -163,7 +168,7 @@ namespace TA
 		ClickItem heavySpeed2;
 		heavySpeed2.rect.top = 301;
 		heavySpeed2.rect.height = 20;
-		heavySpeed2.rect.left = 461;
+		heavySpeed2.rect.left = LVL2_LEFT;
 		heavySpeed2.rect.width = 20;
 		heavySpeed2.action = HeavySpeed;
 		heavySpeed2.cost = 2;
@@ -173,7 +178,7 @@ namespace TA
 		ClickItem heavyArmor1;
 		heavyArmor1.rect.top = 324;
 		heavyArmor1.rect.height = 20;
-		heavyArmor1.rect.left = 437;
+		heavyArmor1.rect.left = LVL1_LEFT;
 		heavyArmor1.rect.width = 20;
 		heavyArmor1.action = HeavyArmor;
 		heavyArmor1.cost = 1;
@@ -183,7 +188,7 @@ namespace TA
 		ClickItem heavyArmor2;
 		heavyArmor2.rect.top = 324;
 		heavyArmor2.rect.height = 20;
-		heavyArmor2.rect.left = 461;
+		heavyArmor2.rect.left = LVL2_LEFT;
 		heavyArmor2.rect.width = 20;
 		heavyArmor2.action = HeavyArmor;
 		heavyArmor2.cost = 2;
@@ -193,7 +198,7 @@ namespace TA
 		ClickItem heavyArmor3;
 		heavyArmor3.rect.top = 324;
 		heavyArmor3.rect.height = 20;
-		heavyArmor3.rect.left = 485;
+		heavyArmor3.rect.left = LVL3_LEFT;
 		heavyArmor3.rect.width = 20;
 		heavyArmor3.action = HeavyArmor;
 		heavyArmor3.cost = 3;
@@ -203,7 +208,7 @@ namespace TA
 		ClickItem heavyArmor4;
 		heavyArmor4.rect.top = 324;
 		heavyArmor4.rect.height = 20;
-		heavyArmor4.rect.left = 509;
+		heavyArmor4.rect.left = LVL4_LEFT;
 		heavyArmor4.rect.width = 20;
 		heavyArmor4.action = HeavyArmor;
 		heavyArmor4.cost = 3;
@@ -213,7 +218,7 @@ namespace TA
 		ClickItem heavyShield1;
 		heavyShield1.rect.top = 348;
 		heavyShield1.rect.height = 20;
-		heavyShield1.rect.left = 437;
+		heavyShield1.rect.left = LVL1_LEFT;
 		heavyShield1.rect.width = 20;
 		heavyShield1.action = HeavyShield;
 		heavyShield1.cost = 1;
@@ -223,7 +228,7 @@ namespace TA
 		ClickItem heavyShield2;
 		heavyShield2.rect.top = 348;
 		heavyShield2.rect.height = 20;
-		heavyShield2.rect.left = 461;
+		heavyShield2.rect.left = LVL2_LEFT;
 		heavyShield2.rect.width = 20;
 		heavyShield2.action = HeavyShield;
 		heavyShield2.cost = 1;
@@ -233,7 +238,7 @@ namespace TA
 		ClickItem heavyShield3;
 		heavyShield3.rect.top = 348;
 		heavyShield3.rect.height = 20;
-		heavyShield3.rect.left = 485;
+		heavyShield3.rect.left = LVL3_LEFT;
 		heavyShield3.rect.width = 20;
 		heavyShield3.action = HeavyShield;
 		heavyShield3.cost = 2;
@@ -243,7 +248,7 @@ namespace TA
 		ClickItem heavyShield4;
 		heavyShield4.rect.top = 348;
 		heavyShield4.rect.height = 20;
-		heavyShield4.rect.left = 509;
+		heavyShield4.rect.left = LVL4_LEFT;
 		heavyShield4.rect.width = 20;
 		heavyShield4.action = HeavyShield;
 		heavyShield4.cost = 3;

@@ -19,7 +19,7 @@ namespace TA
 		assert(IsLoaded());
 
 		metaText = Game::GetText();
-		metaText.setColor(sf::Color::Red);
+		metaText.setFillColor(sf::Color::Red);
 		metaText.setCharacterSize(18);
 		metaText.setString("");
 
@@ -48,7 +48,7 @@ namespace TA
 		assert(IsLoaded());
 
 		metaText = Game::GetText();
-		metaText.setColor(sf::Color::Red);
+		metaText.setFillColor(sf::Color::Red);
 		metaText.setCharacterSize(18);
 		metaText.setString("");
 		
@@ -59,7 +59,7 @@ namespace TA
 		turret->SetObjectId(Game::GetGameObjectManager()->Add("Turret", turret));
 		turretId = turret->GetObjectId();
 
-		std::cout << "DEBUG <Tower::Tower(_x, _y)>: Tower initialized with turret id: " << turretId << "\n";
+		std::cout << "DEBUG <Tower::Tower(" << _x << "," << _y << ")>: Tower initialized with turret id : " << turretId << "\n";
 	}
 
 
@@ -175,7 +175,7 @@ namespace TA
 		}
 		
 		// Valid target defined, check the distance. Return -1 if target has moved out of range
-		sf::Vector2f targetPos = target._Get()->GetPosition();
+		sf::Vector2f targetPos = target.lock().get()->GetPosition();
 		float deltaX = abs(targetPos.x - GetPosition().x);
 		float deltaY = abs(targetPos.y - GetPosition().y);
 
@@ -193,7 +193,7 @@ namespace TA
 
 	void Tower::SelectNewTarget()
 	{
-		if (!target.expired() && target._Get()->GetDeleteStatus())
+		if (!target.expired() && target.lock().get()->GetDeleteStatus())
 			target.reset();
 
 		// Select a new target, if no target specified OR the specified target has moved out of range

@@ -25,7 +25,7 @@ namespace TA
 		std::shared_ptr<GameObject> Get(unsigned int _id); // Return a handle to the specific game object in the game world
 		std::vector<std::shared_ptr<GameObject>> GetByType(std::string type); // Return a list of handles to all objects with certain type
 		std::vector<std::shared_ptr<GameObject>> GetByPosition(float _x, float _y); // Return list of game objects in certain position
-		std::vector<std::shared_ptr<GameObject>> GetByPosition(int _x, int _y); // Return list of game objects in certain position
+		//std::vector<std::shared_ptr<GameObject>> GetByPosition(int _x, int _y); // Return list of game objects in certain position
 		std::vector<std::weak_ptr<GameObject>> GetByDistanceFrom(float _x, float _y, float _dist); // Return list of game objects with max dist of _dist from _x, _y
 		unsigned int GetPassiveAtts(); // Return number of passive characters
 		unsigned int GetAmountOf(std::string name); // Return how many objects of the specified name exists
@@ -49,6 +49,6 @@ namespace TA
 		unsigned int objectId; // Increasing counter for the object IDs that are saved in the map
 		std::map<std::string, std::shared_ptr<GameObject>> gameObjects; // Maping all the game objects in the game world. Using shared pointers.
 
-		static const bool debug = false;
+		static const bool debug = true;
 	};
 }
